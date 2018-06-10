@@ -78,7 +78,8 @@
 	tabBarController.customizableViewControllers = nil;
 	tabBarController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	
-    [window addSubview:tabBarController.view];
+    //[window addSubview:tabBarController.view];
+    [window setRootViewController: tabBarController];
     [window makeKeyAndVisible];
 	
 	if([LifePath preferences].firstRunCompleted == NO)
