@@ -935,6 +935,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = "Gripwire, Inc.";
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "LifePath" */;
 			compatibilityVersion = "Xcode 3.1";
@@ -1113,7 +1118,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = LTNA7GPD24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"Classes/HelperClasses//**",
 					$SDKROOT/usr/include/libxml2,
@@ -1129,6 +1136,8 @@
 				INFOPLIST_FILE = "LifePath-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_NAME = WhereWuz;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -1138,7 +1147,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = LTNA7GPD24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"Classes/HelperClasses//**",
 					$SDKROOT/usr/include/libxml2,
@@ -1152,6 +1163,9 @@
 				INFOPLIST_FILE = "LifePath-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_NAME = WhereWuz;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1179,7 +1193,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = LTNA7GPD24;
 				FRAMEWORK_SEARCH_PATHS = (
 					"Classes/HelperClasses/**",
 					"$SDKROOT/usr/include/libxml2/**",
@@ -1193,6 +1209,9 @@
 				INFOPLIST_FILE = "LifePath-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PRODUCT_NAME = WhereWuz;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
