@@ -27,7 +27,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMainNibFile</key>
-	<string>MainWindow</string>
+	<string>MainWindow2</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
