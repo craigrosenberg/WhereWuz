@@ -359,7 +359,7 @@
 
 - (void)selectionViewController:(SelectionViewController*)svc selectedItemChanged:(int)selectedItem;
 {
-	[Analytics sendAnalyticsTag:@"changedPreferences" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"changedPreferences" metadata:nil blocking:NO];
 	
 	if([svc.title isEqualToString:@"Logging Frequency"])
 	{
@@ -392,11 +392,13 @@
 
 - (void)lifetrackerChanged:(UISwitch*)trackerSwitch
 {
+    /*
 	if(trackerSwitch)
-		[Analytics sendAnalyticsTag:@"enabledTracker" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"enabledTracker" metadata:nil blocking:NO];
 	else
-		[Analytics sendAnalyticsTag:@"disabledTracker" metadata:nil blocking:NO];
-	
+		//[Analytics sendAnalyticsTag:@"disabledTracker" metadata:nil blocking:NO];
+	*/
+    
 	[LifePath preferences].trackerEnabled = trackerSwitch.on;
 	[LifePath tracker].enabled = trackerSwitch.on;
 }
@@ -415,7 +417,7 @@
 	if(buttonIndex != alertView.cancelButtonIndex)
 	{
 		[[LifePath data] clearAllPoints];
-		[Analytics sendAnalyticsTag:@"clearedData" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"clearedData" metadata:nil blocking:NO];
 	
 		/*
 		if(alertView.tag == 1)

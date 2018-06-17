@@ -15,7 +15,7 @@
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"SearchBottomView" bundle:nil])
+	if(self = [super initWithNibName:@"SearchBottomView2" bundle:nil])
 	{
 
 	}

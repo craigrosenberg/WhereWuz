@@ -13,7 +13,7 @@
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"WhereStart" bundle:nil])
+	if(self = [super initWithNibName:@"WhereStart2" bundle:nil])
 	{
 		self.title = @"Where Wuz";
 		self.navigationItem.title = self.title;

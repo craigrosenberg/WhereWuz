@@ -83,7 +83,7 @@ static LifePath* sharedLP = nil;
 			 image:(UIImage*)routeImage
 navigationController:(UINavigationController*)nc
 {
-	[Analytics sendAnalyticsTag:@"sharedRoute" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"sharedRoute" metadata:nil blocking:NO];
 	NSLog(@"url: %@", shareURL);
 	
 	switch(shareAction)

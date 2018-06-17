@@ -359,7 +359,7 @@ static NSMutableArray* favoriteCandidates;
 	
 	if(publishFavoritesToFaceBook && socialViewController.hasFaceBookPermessionToPublishFeed)
 	{	
-		[Analytics sendAnalyticsTag:@"FavoriteZonePostedFB" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"FavoriteZonePostedFB" metadata:nil blocking:NO];
 		NSMutableDictionary *params = [NSMutableDictionary dictionary];
 		NSString *attachment = [NSString stringWithFormat:CandidateFacebookShare,socialViewController.connectedFaceBookUserName];
 		[params setObject:attachment forKey:@"attachment"];
@@ -368,7 +368,7 @@ static NSMutableArray* favoriteCandidates;
 	
 	if(isTwitterLogedIn && publishFavoritesToTwitter)
 	{		
-		[Analytics sendAnalyticsTag:@"FavoriteZonePostedTwitter" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"FavoriteZonePostedTwitter" metadata:nil blocking:NO];
 		NSString* twitterFavoriteStationString = [NSString stringWithFormat:CandidateTwitterShare];
 		[sharedTwitterEngine sendUpdate:twitterFavoriteStationString];		
 	}

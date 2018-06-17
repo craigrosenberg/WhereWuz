@@ -64,6 +64,7 @@ static NSString* analyticsUrl = @"http://www.gripwire.com/iphone_analytics/index
 
 + (void)sendAnalyticsTag:(NSString*)tag metadata:(NSDictionary*)metadata blocking:(BOOL)blocking
 {
+    /*
 	NSString* deviceId = [[UIDevice currentDevice] uniqueIdentifier];
 	NSString* appId = [[NSBundle mainBundle] bundleIdentifier];
 	NSString* version = [[UIDevice currentDevice] systemVersion];
@@ -94,6 +95,7 @@ static NSString* analyticsUrl = @"http://www.gripwire.com/iphone_analytics/index
 		[request startAsynchronous];	
 	
 	NSLog(@"Analytics -> %@", tag);
+     */
 }
 
 @end

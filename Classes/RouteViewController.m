@@ -83,7 +83,7 @@ CGImageRef UIGetScreenImage();
 
 - (id)initWithRoute:(NSArray*)route
 {
-	if(self = [super initWithNibName:@"RouteView" bundle:nil])
+	if(self = [super initWithNibName:@"RouteView2" bundle:nil])
 	{
 		self.routePoints = route;
 		

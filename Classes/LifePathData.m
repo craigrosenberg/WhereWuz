@@ -297,7 +297,7 @@
 // Save a new path to the database (takes NSDictionary objects)
 - (void)saveNewPath:(NSArray*)points
 {
-	[Analytics sendAnalyticsTag:@"savedNewFavorite" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"savedNewFavorite" metadata:nil blocking:NO];
 	
 	NSManagedObjectContext* moc = [self managedObjectContext];
 	
@@ -330,7 +330,7 @@
 
 - (void)deletePath:(Path*)path
 {
-	[Analytics sendAnalyticsTag:@"deletedFavorite" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"deletedFavorite" metadata:nil blocking:NO];
 	
 	[[self managedObjectContext] deleteObject:path];
 	[self save];

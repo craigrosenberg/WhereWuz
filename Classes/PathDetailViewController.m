@@ -135,7 +135,7 @@
 {
 	if(indexPath.section > 0)
 	{	
-		[Analytics sendAnalyticsTag:@"viewedFavorite" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"viewedFavorite" metadata:nil blocking:NO];
 		
 		//	Sort the points
 		NSMutableArray* sortedPoints = [NSMutableArray arrayWithArray:[path.points allObjects]];

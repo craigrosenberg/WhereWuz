@@ -64,7 +64,7 @@ enum WhenViewControllerModes
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"WhenWasI" bundle:nil])
+	if(self = [super initWithNibName:@"WhenWasI2" bundle:nil])
 	{
 		self.title = @"When Wuz";
 		self.navigationItem.title = self.title;
@@ -105,7 +105,7 @@ enum WhenViewControllerModes
 
 - (void)whenPressed:(id)sender
 {
-	[Analytics sendAnalyticsTag:@"whenWuzQuery" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"whenWuzQuery" metadata:nil blocking:NO];
 	[self retrieveResults];
 }
 

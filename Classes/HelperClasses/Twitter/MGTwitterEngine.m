@@ -1015,7 +1015,7 @@ static NSMutableDictionary *createBaseDictionary(NSString *server, NSString *acc
 - (NSString *)checkUserCredentials
 {
 
-	[Analytics sendAnalyticsTag:@"TwitterLoginNow" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"TwitterLoginNow" metadata:nil blocking:NO];
     NSString *path = [NSString stringWithFormat:@"account/verify_credentials.%@", API_FORMAT];
 	
 	NSLog(@"Twitter Login URL->%@",path);

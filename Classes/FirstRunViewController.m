@@ -15,7 +15,7 @@
 
 - (id)init
 {
-    if ((self = [super initWithNibName:@"FirstRunView" bundle:nil]))
+    if ((self = [super initWithNibName:@"FirstRunView2" bundle:nil]))
 	{
 		
     }

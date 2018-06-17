@@ -17,7 +17,7 @@
 
 - (id)initWithStartDate:(NSDate*)date
 {
-	if(self = [super initWithNibName:@"WhereEnd" bundle:nil])
+	if(self = [super initWithNibName:@"WhereEnd2" bundle:nil])
 	{
 		self.startDate = date;
 		
@@ -55,7 +55,7 @@
 	NSArray* routePoints = [[LifePath data] whereWuzStart:startDate end:endTimePicker.date];
 	NSArray* locations = [[LifePath data] convertTrackingPointsToLocations:routePoints];
 	
-	[Analytics sendAnalyticsTag:@"whereWuzQuery" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"whereWuzQuery" metadata:nil blocking:NO];
 	
 	// Remove loading screen
 	[loadingView removeFromSuperview];

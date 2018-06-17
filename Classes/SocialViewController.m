@@ -62,7 +62,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	[Analytics sendAnalyticsTag:@"FaceBookTwitterViewLoaded" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"FaceBookTwitterViewLoaded" metadata:nil blocking:NO];
 }
 
 - (IBAction) showLogin
@@ -186,7 +186,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 	{
 		_twitterLoginSubmit.enabled = NO;
 		[MGTwitterEngine setUsername:trimmedUsername password:trimmedPassword remember:_twitterRememberCredentials.on];
-		[Analytics sendAnalyticsTag:@"TwitterLogin" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"TwitterLogin" metadata:nil blocking:NO];
 //		sharedTwitterEngine = [[MGTwitterEngine alloc] initWithDelegate:socialViewController];
 //		[sharedTwitterEngine checkUserCredentials];
 //Rob		[[SocialManager getSharedTwitterEngine] checkUserCredentials];
@@ -218,7 +218,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 
 - (IBAction) updateTwitterShare
 {
-	[Analytics sendAnalyticsTag:@"TwitterUpdated" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"TwitterUpdated" metadata:nil blocking:NO];
 	[[SocialManager getSharedTwitterEngine] sendUpdate:@"WhereWuz: Know Where You Were, at Any Time. http://bit.ly/wherewuz"];
 	[_twitterShareDialogView removeFromSuperview];
 }
@@ -235,7 +235,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 {
 	if(!_isLogingOut)
 	{
-		[Analytics sendAnalyticsTag:@"TwitterLoggedIn" metadata:nil blocking:NO];
+		//[Analytics sendAnalyticsTag:@"TwitterLoggedIn" metadata:nil blocking:NO];
 		[_twitterLoginButton setImage:[UIImage imageNamed:@"twitter_signout.png"] forState:UIControlStateNormal];
 		[_twitterLoginButton setImage:[UIImage imageNamed:@"twitter_signout_highlighted.png"] forState:UIControlStateHighlighted];
 		[_twitterLoginButton setImage:[UIImage imageNamed:@"twitter_signout_highlighted.png"] forState:UIControlStateSelected];
@@ -255,7 +255,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 		
 		if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"logedIntoTwitterBefore"] boolValue])
 		{
-			[Analytics sendAnalyticsTag:@"FirstTwitterPost" metadata:nil blocking:NO];
+			//[Analytics sendAnalyticsTag:@"FirstTwitterPost" metadata:nil blocking:NO];
 			[[SocialManager getSharedTwitterEngine] sendUpdate:@"is checking out WhereWuz. http://bit.ly/wherewuz"];
 			[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"logedIntoTwitterBefore"];
 		}
@@ -384,7 +384,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 
 - (void) publishFavorite
 {
-	[Analytics sendAnalyticsTag:@"FaceBookPost" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"FaceBookPost" metadata:nil blocking:NO];
 	NSString *message = @"test message here";
 	NSMutableDictionary *params = [NSMutableDictionary dictionary];
 	[params setObject:message forKey:@"message"];
@@ -473,7 +473,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 			if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"logedIntoFaceBookBefore"] boolValue])
 			{
 
-				[Analytics sendAnalyticsTag:@"FirstPostFacebook" metadata:nil blocking:NO];
+				//[Analytics sendAnalyticsTag:@"FirstPostFacebook" metadata:nil blocking:NO];
 				NSMutableDictionary* params = [NSMutableDictionary dictionary];
 				NSString* attachment = [NSString stringWithFormat:@"{\"name\":\"WhereWuz iPhone Application\",\"href\":\"http://bit.ly/WhereWuz\",\"caption\":\"Real-time and historical information on your location.\",\"description\":\"Turn your iPhone into a powerful tool for viewing real-time and historical data related to where you've been. Get WhereWuz.\",\"media\":[{\"type\":\"image\",\"src\":\"http://184.72.254.21/images/icon.png\",\"href\":\"http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=software&media=all&page=1&restrict=false&startIndex=0&term=wherewuz\"}],\"properties\":{\"iTunes Url\":{\"text\":\"Other WhereWuz iPhone Applications\",\"href\":\"http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=software&media=all&page=1&restrict=false&startIndex=0&term=wherewuz\"}}}", _connectedFaceBookUserName ];
 				[params setObject:attachment forKey:@"attachment"];
@@ -521,7 +521,7 @@ static NSString* kApiSecret = @"a4ec72b7ff03c35c2ff084838a433e6e";
 		if(![[[NSUserDefaults standardUserDefaults] objectForKey:@"logedIntoFaceBookBefore"] boolValue])
 		{
 */
-			[Analytics sendAnalyticsTag:@"FacebookLoginPost" metadata:nil blocking:NO];
+			//[Analytics sendAnalyticsTag:@"FacebookLoginPost" metadata:nil blocking:NO];
 			NSMutableDictionary* params = [NSMutableDictionary dictionary];
 			NSString* attachment =   [NSString stringWithFormat:@"{\"name\":\"WhereWuz iPhone Application\",\"href\":\"http://bit.ly/WhereWuz\",\"caption\":\"Real-time and historical information on your location.\",\"description\":\"Turn your iPhone into a powerful tool for viewing real-time and historical data related to where you've been. Get WhereWuz.\",\"media\":[{\"type\":\"image\",\"src\":\"http://184.72.254.21/images/icon.png\",\"href\":\"http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=software&media=all&page=1&restrict=false&startIndex=0&term=wherewuz\"}],\"properties\":{\"iTunes Url\":{\"text\":\"Other WhereWuz iPhone Applications\",\"href\":\"http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=software&media=all&page=1&restrict=false&startIndex=0&term=wherewuz\"}}}", _connectedFaceBookUserName ];
 			NSString* actionLinks = @"[{\"text\":\"Get WhereWuz\",\"href\":\"http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=software&media=all&page=1&restrict=false&startIndex=0&term=wherewuz\"},{\"text\":\"Other WhereWuz iPhone Applications\",\"href\":\"http://ax.search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?entity=software&media=all&page=1&restrict=false&startIndex=0&term=wherewuz\"}]";

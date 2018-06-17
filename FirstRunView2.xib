@@ -15,17 +15,15 @@
                 <outlet property="view" destination="82X-Py-gZv" id="6Q9-4r-aI7"/>
             </connections>
         </placeholder>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <viewController id="wUh-Wp-nui">
-            <view key="view" contentMode="scaleToFill" id="82X-Py-gZv">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-P2-LK3">
-                        <rect key="frame" x="16" y="20" width="351" height="590"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <string key="text">Welcome to WhereWuz
+        <view contentMode="scaleToFill" id="82X-Py-gZv">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Epg-P2-LK3">
+                    <rect key="frame" x="16" y="20" width="351" height="590"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Welcome to WhereWuz
 
 WhereWuz records your GPS locations and stores the path on your phone. You can search and view your path whenever you want. You can even save the best parts of your path and share them with your friends.
            
@@ -33,22 +31,21 @@ Because this is your first time using WhereWuz, your current path is only one po
 
 Enjoy,
 Sunny Day Software</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gr-qV-EiS">
-                        <rect key="frame" x="166" y="625" width="54" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                        <state key="normal" title="Dismiss"/>
-                        <connections>
-                            <action selector="dismissPressed:" destination="-1" eventType="touchUpInside" id="lf4-38-VNn"/>
-                        </connections>
-                    </button>
-                </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <viewLayoutGuide key="safeArea" id="uWF-am-XEJ"/>
-            </view>
-            <point key="canvasLocation" x="25.5" y="52.5"/>
-        </viewController>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gr-qV-EiS">
+                    <rect key="frame" x="166" y="625" width="54" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <state key="normal" title="Dismiss"/>
+                    <connections>
+                        <action selector="dismissPressed:" destination="-1" eventType="touchUpInside" id="lf4-38-VNn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="uWF-am-XEJ"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
 </document>

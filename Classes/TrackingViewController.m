@@ -75,7 +75,7 @@ CGImageRef UIGetScreenImage();
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"Tracking" bundle:nil])
+	if(self = [super initWithNibName:@"Tracking2" bundle:nil])
 	{
 		self.title = @"Tracking";
 		self.navigationItem.title = self.title;

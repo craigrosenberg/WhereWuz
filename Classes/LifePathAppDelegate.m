@@ -38,7 +38,7 @@
 {
 	// Query the shared LifePath singleton to instantiate it with the launch of the app
 	[LifePath shared];
-	[SocialManager restoreSocialManager];
+	//[SocialManager restoreSocialManager];
 	
 
 	/*
@@ -48,7 +48,7 @@
 	[socialViewController release];	 
 	*/
 	
-	[Analytics sendAnalyticsTag:@"appLaunched" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"appLaunched" metadata:nil blocking:NO];
 	
 	UIViewController* trackingVC = [[[TrackingViewController alloc] init] autorelease];
 	UIViewController* whereVC = [[[WhereStartViewController alloc] init] autorelease];
@@ -56,7 +56,7 @@
 	UIViewController* favesVC = [[[FavoritesViewController alloc] init] autorelease];	
 	UIViewController* prefsVC = [[[PreferencesViewController alloc] init] autorelease];
 	UIViewController* aboutVC = [[[AboutViewController alloc] init] autorelease];
-	
+    
 /*
  SocialViewController* socVC = [[SocialViewController alloc] init];
 	[socVC loadView];
@@ -65,6 +65,7 @@
 */
 	
 	tabBarController = [[UITabBarController alloc] init];
+
 	tabBarController.viewControllers = [NSArray arrayWithObjects:
 										[self ncForVC:trackingVC],
 										[self ncForVC:whereVC],
@@ -73,8 +74,8 @@
 										[self ncForVC:prefsVC],
 										[self ncForVC:aboutVC],
 //										[self ncForVC:socVC],
-										nil];
-	
+                                        nil];
+    
 	tabBarController.customizableViewControllers = nil;
 	tabBarController.moreNavigationController.navigationBar.barStyle = UIBarStyleBlack;
 	
@@ -85,13 +86,14 @@
 	if([LifePath preferences].firstRunCompleted == NO)
 	{
 		FirstRunViewController* firstTime = [[FirstRunViewController alloc] init];
+        //FirstRunViewController* firstTime = [[FirstRunViewController alloc] init];
 		firstTime.parentVC = tabBarController;
 		
 		[tabBarController presentModalViewController:firstTime animated:YES];
 		
 		[firstTime release];
 	}
-		
+    
 	// Grab the number of records on the device
 	NSUInteger numRecords = [[LifePath data] getRecordCount];
 	NSLog(@"%d records in sqlite db.", numRecords);
@@ -114,14 +116,14 @@
 
 - (void)applicationWillTerminate:(UIApplication*)application
 {
-	[Analytics sendAnalyticsTag:@"appTerminated" metadata:nil blocking:YES];
+	//[Analytics sendAnalyticsTag:@"appTerminated" metadata:nil blocking:YES];
 	[LifePath preferences].firstRunCompleted = YES;
 	[SocialManager saveSocialManager];
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
 {
-	[Analytics sendAnalyticsTag:@"memoryWarning" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"memoryWarning" metadata:nil blocking:NO];
 	NSLog(@"Received memory warning, popping all view controllers (except current).");
 	
 	UINavigationController* selectedVC = (UINavigationController*)tabBarController.selectedViewController;

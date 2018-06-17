@@ -136,7 +136,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[Analytics sendAnalyticsTag:@"viewedStatistics" metadata:nil blocking:NO];
+	//[Analytics sendAnalyticsTag:@"viewedStatistics" metadata:nil blocking:NO];
 }
 
 - (void)optionsPressed:(id)sender
