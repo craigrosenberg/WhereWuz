@@ -64,7 +64,7 @@ enum WhenViewControllerModes
 
 - (id)init
 {
-	if(self = [super initWithNibName:@"WhenWasI2" bundle:nil])
+	if(self = [super initWithNibName:@"WhenWasI" bundle:nil])
 	{
 		self.title = @"When Wuz";
 		self.navigationItem.title = self.title;

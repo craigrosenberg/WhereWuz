@@ -18,7 +18,7 @@
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <window contentMode="scaleToFill" resizesToFullScreen="NO" id="Mh4-ms-9U6">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <autoresizingMask key="autoresizingMask"/>
             <viewLayoutGuide key="safeArea" id="WRM-AS-EPF"/>
             <point key="canvasLocation" x="33" y="34"/>
         </window>

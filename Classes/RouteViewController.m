@@ -101,7 +101,6 @@ CGImageRef UIGetScreenImage();
 	self.navigationController.toolbarHidden = NO;
 	
 	loadingView = [[LoadingView alloc] initWithFrame:self.navigationController.view.bounds];
-	
 	[self loadRoute];
 	[super viewDidLoad];
 	

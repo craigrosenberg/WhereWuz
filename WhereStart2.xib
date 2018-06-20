@@ -39,6 +39,9 @@
                     <rect key="frame" x="156" y="489" width="62" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Continue"/>
+                    <connections>
+                        <action selector="continuePressed:" destination="-1" eventType="touchUpInside" id="iyc-Dq-thQ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
