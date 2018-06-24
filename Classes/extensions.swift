@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIDevice {
+    func uniqueIdentifier()->String {
+        return "unique-id"
+    }
+}

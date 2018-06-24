@@ -75,7 +75,8 @@
 		locationManager.delegate = self;
 		locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 		locationManager.distanceFilter = 10.0f;
-		
+        [locationManager requestAlwaysAuthorization];
+        
 		// Enable the tracker
 		self.enabled = [LifePath preferences].trackerEnabled;
 		self.bypassUpload = NO;
@@ -108,6 +109,8 @@
 	else
 		[locationManager stopUpdatingLocation];
 }
+
+
 
 - (BOOL)uploadPoints:(NSArray*)points
 {
@@ -166,7 +169,7 @@
 					
 					// Save the updated points
 					[[LifePath data] save];
-				}				
+				}
 			}
 			
 			// Perform database maintenance

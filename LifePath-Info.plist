@@ -42,5 +42,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>WhereWuzI need to track your location so it can later be referenced in queries for location and time</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>WhereWuzI need to track your location so it can later be referenced in queries for location and time</string>
 </dict>
 </plist>

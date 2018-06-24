@@ -2867,11 +2867,13 @@ static NSOperationQueue *sharedQueue = nil;
 
 		if ([self readStreamIsScheduled]) {
 			runningRequestCount--;
+            /* dss
 			#if TARGET_OS_IPHONE
 			if (shouldUpdateNetworkActivityIndicator && runningRequestCount == 0) {
 				[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 			}
 			#endif
+            */
 		}
 
 		[self setReadStreamIsScheduled:NO];
@@ -2891,11 +2893,13 @@ static NSOperationQueue *sharedQueue = nil;
 
 		[connectionsLock lock];
 		runningRequestCount++;
+        /* dss
 		#if TARGET_OS_IPHONE
 		if (shouldUpdateNetworkActivityIndicator) {
 			[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 		}
 		#endif
+        */
 		[connectionsLock unlock];
 
 		// Reset the timeout

@@ -107,7 +107,8 @@ CGImageRef UIGetScreenImage();
 	
 	routeAnnotation = [[CSRouteAnnotation alloc] initWithPoints:[NSArray array]];
 	[mapView addAnnotation:routeAnnotation];
-	
+    mapView.showsUserLocation=YES;
+    
 	statusBar = [[[StatusBar alloc] initWithFrame:statusContainer.bounds] autorelease];
 	[statusContainer addSubview:statusBar];
 	
