@@ -88,7 +88,7 @@ CGImageRef UIGetScreenImage();
 							 [self buttonWithImage:@"globe.png" action:@selector(cycleMapType:)],
 							 followMeButton,
 							 [self buttonWithTitle:@"Statistics" action:@selector(statisticsPressed:) tag:0],
-							 [self buttonWithTitle:@"Share" action:@selector(sharePressed:) tag:0],
+							 /*dss [self buttonWithTitle:@"Share" action:@selector(sharePressed:) tag:0],*/
 							 //[self buttonWithTitle:@"Debug" action:@selector(injectLocation) tag:0],
 							 nil];
 		

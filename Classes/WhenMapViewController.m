@@ -33,7 +33,8 @@
 		self.toolbarItems = [NSArray arrayWithObjects:
 							 [self buttonWithImage:@"globe.png" action:@selector(cycleMapType:)],
 							 [self buttonWithTitle:@"Statistics" action:@selector(statisticsPressed:) tag:0],
- 							 [self buttonWithTitle:@"Share" action:@selector(sharePressed:) tag:0],
+ 							 /* dss get rid of share
+                              [self buttonWithTitle:@"Share" action:@selector(sharePressed:) tag:0], */
 							 [self addFavoriteButton], nil];
 		
 		self.navigationItem.rightBarButtonItem = [self buttonWithTitle:@"New Search"
